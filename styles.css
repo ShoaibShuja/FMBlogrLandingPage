@@ -1,0 +1,655 @@
+:root {
+  --color-light-red: hsl(356, 100%, 66%);
+  --color-very-light-red: hsl(355, 100%, 74%);
+  --color-very-dark-blue : hsl(208, 49%, 24%);
+
+  --color-white : hsl(0, 0%, 100%);
+  --color-grayish-blue : hsl(240, 2%, 79%)
+  --color-very-dark-grayish-blue : hsl(207, 13%, 34%);
+  --color-very-dark-black-blue : hsl(240, 10%, 16%);
+
+  --color-very-light-red: hsl(13, 100%, 72%);
+  --color-light-red: hsl(353, 100%, 62%);
+  --very-dark-gray-blue: hsl(237, 17%, 21%);
+  --very-dark-desaturated-blue: hsl(237, 23%, 32%);
+
+  --font-family-1: "Overpass", sans-serif;
+  --font-family-2: "Ubuntu", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/*************** Custom Classes *************/
+
+.white__btn {
+  padding: .6rem 1.2rem;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 600;
+  font-family: var(--font-family-1);
+
+  border: .1rem solid var(--color-white);
+  color: var(--color-light-red);
+  background: var(--color-white);
+
+  cursor: pointer;
+
+  transition: .5s ease;
+}
+
+.white__btn:hover {
+  border: none;
+
+  color: var(--color-light-red);
+  background: hsl(355, 100%, 74%);
+
+  transform: scale(1.1);
+}
+
+.transparent__btn {
+  margin-left: 1rem;
+
+  padding: .6rem 1.2rem;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 600;
+  font-family: var(--font-family-1);
+
+  border: .1rem solid var(--color-white);
+  color: var(--color-white);
+  background: transparent;
+
+  cursor: pointer;
+
+  transition: .5s ease;
+}
+
+.transparent__btn:hover {
+  color: var(--color-light-red);
+  background: var(--color-white);
+
+  transform: scale(1.1);
+}
+
+/*************** Heading Section *************/
+
+.blogr__heading {
+  position: relative;
+
+  padding: 4rem 10.5rem;
+  border-bottom-left-radius: 6rem;
+
+  background: url('./images/bg-pattern-intro-desktop.svg'), linear-gradient(var(--color-light-red), var(--color-very-light-red));
+  background-repeat: no-repeat;
+  background-size: 220%;
+  background-position: center;
+  background-position-x: 25%;
+  background-position-y: 52%;
+}
+
+.blogr__heading-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blogr__heading-header img {
+  width: 100px;
+  margin-right: 4rem;
+}
+
+.blogr__heading-header .blogr__heading-header_navbar {
+  flex: 2;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+.blogr__heading-header .blogr__heading-header_navbar p,
+.blogr__heading-header .blogr__heading-header_login-signup p {
+  font-family: var(--font-family-1);
+  font-size: 1rem;
+
+  color: var(--color-white);
+
+  cursor: pointer;
+}
+
+.blogr__heading-header .blogr__heading-header_navbar p img {
+  width: 10px;
+
+  margin-left: 5px;
+  margin-right: 0;
+}
+
+.blogr__heading-header .blogr__heading-header_login-signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.blogr__heading-header .blogr__heading-header_login-signup button {
+  width: 130px;
+}
+
+.blogr__heading-header #menu {
+  width: 40px;
+  display: none;
+}
+
+.blogr__heading-title {
+  margin: 8rem 0;
+
+  text-align: center;
+}
+
+.blogr__heading-title h1 {
+  font-size: 3.7rem;
+  font-family: var(--font-family-1);
+
+  color: var(--color-white);
+}
+
+.blogr__heading-title p {
+  margin-top: .6rem;
+
+  word-spacing: .15rem;
+  font-size: 1.2rem;
+  font-family: var(--font-family-1);
+  font-weight: 300;
+
+  color: var(--color-white);
+}
+
+.blogr__heading-title button {
+  margin-top: 3.2rem;
+  margin-bottom: -2.5rem;
+}
+
+/*************** Editor Section *************/
+
+.blogr__editor {
+  position: relative;
+  height: 100%;
+
+  padding: 8.5rem 0 8.5rem 2rem;
+
+  background: hsl(0,0%,98.04%);
+}
+
+.blogr__editor h1 {
+  font-size: 2.4rem;
+  font-family: var(--font-family-1);
+  text-align: center;
+
+  color: var(--color-very-dark-blue);
+}
+
+.blogr__editor-main {
+  margin: .6rem 2.5rem;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+.blogr__editor-main_text {
+  margin: 6rem;
+
+  width: 40%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5rem;
+}
+
+.blogr__editor-main_text-first h3,
+.blogr__editor-main_text-second h3 {
+  font-size: 28.8px;
+  line-height: 31.68px;
+  font-family: var(--font-family-1);
+
+  color: var(--color-very-dark-blue);
+} 
+
+.blogr__editor-main_text-first p,
+.blogr__editor-main_text-second p {
+  margin-top: 1.5rem;
+
+  font-size: 16.8px;
+  line-height: 28.392px;
+  font-family: var(--font-family-2);
+
+  color: var(--color-very-dark-blue);
+} 
+
+.blogr__editor-main_image {
+  position: absolute;
+  top: 5%;
+  right: -19.5%
+}
+
+.blogr__editor-main_image img{
+  width: 925px;
+  height: 882px;
+}
+
+/*************** Phone Section *************/
+
+.blogr__phone {
+  position: relative;
+
+  margin-top: 2.5rem;
+
+  padding: 7.3rem 8.5rem 8rem;
+  border-top-right-radius: 6rem;
+  border-bottom-left-radius: 6rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+
+  background: url('./images/bg-pattern-circles.svg'), linear-gradient(var(--very-dark-gray-blue), var(--very-dark-desaturated-blue));
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
+.blogr__phone-image {
+  position: absolute;
+  left: 9%;
+  top: -16%;
+}
+
+.blogr__phone-text {
+  margin-left: 37.5rem;
+}
+
+.blogr__phone-text h1 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 49.5px;
+  font-family: var(--font-family-1);
+
+  color: var(--color-white);
+}
+
+.blogr__phone-text p {
+  margin-top: 1rem;
+
+  font-size: 1rem;
+  line-height: 28.392px;
+  font-family: var(--font-family-2);
+  font-weight: 300;
+
+  color: var(--color-white);
+}
+
+/*************** Laptop Section *************/
+
+.blogr__laptop {
+  position: relative;
+
+  padding: 19rem 2rem;
+}
+
+.blogr__laptop img {
+  position: absolute;
+  top: 12%;
+  left: -19.5%;
+}
+
+.blogr__laptop-text {
+  margin-left: 44rem;
+
+  width: 40%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5rem;
+}
+
+.blogr__laptop-text_first h3,
+.blogr__laptop-text_second h3 {
+  font-size: 28.8px;
+  line-height: 31.68px;
+  font-family: var(--font-family-1);
+
+  color: var(--color-very-dark-blue);
+} 
+
+.blogr__laptop-text_first p,
+.blogr__laptop-text_second p {
+  margin-top: 1.5rem;
+
+  font-size: 16.8px;
+  line-height: 28.392px;
+  font-family: var(--font-family-2);
+
+  color: var(--color-very-dark-blue);
+} 
+
+/*************** Footer Section *************/
+
+.blog__footer {
+  border-top-right-radius: 6rem;
+
+  padding: 5rem 10rem;
+  padding-right: 22rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  background: var(--color-very-dark-black-blue);
+}
+
+.blog__footer img {
+  width: 100px;
+
+  cursor: pointer;
+}
+
+.blog__footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.blog__footer-content h4 {
+  font-family: var(--font-family-2);
+  font-size: 1rem;
+  font-weight: 700;
+
+  color: var(--color-grayish-blue);
+}
+
+.blog__footer-content_box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.blog__footer-content_box p {
+  font-family: var(--font-family-2);
+  font-size: 1rem;
+
+  color: var(--color-grayish-blue);
+
+  cursor: pointer;
+}
+
+.blog__footer-content_box p:hover {
+  text-decoration: underline;
+}
+
+/*************** Dropdown Design *************/
+
+.blogr__heading-header_navbar-product,
+.blogr__heading-header_navbar-company,
+.blogr__heading-header_navbar-connect {
+  position: absolute;
+  top: 17%;
+
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: .5rem;
+
+  background: var(--color-white);
+  box-shadow: 0 0 1rem rgba(0,0,0,.1);
+
+  z-index: 100;
+
+  display: none;
+}
+
+.blogr__heading-header_navbar-product.active,
+.blogr__heading-header_navbar-company.active,
+.blogr__heading-header_navbar-connect.active {
+  display: flex;
+}
+
+.blogr__heading-header .blogr__heading-header_navbar .blogr__heading-header_navbar-product p,
+.blogr__heading-header .blogr__heading-header_navbar .blogr__heading-header_navbar-company p,
+.blogr__heading-header .blogr__heading-header_navbar .blogr__heading-header_navbar-connect p {
+  color: var(--color-very-dark-blue);
+  font-weight: 300;
+}
+
+.blogr__heading-header .blogr__heading-header_navbar .blogr__heading-header_navbar-product p:hover,
+.blogr__heading-header .blogr__heading-header_navbar .blogr__heading-header_navbar-company p:hover,
+.blogr__heading-header .blogr__heading-header_navbar .blogr__heading-header_navbar-connect p:hover {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.blogr__heading-header_navbar-product {
+  left: 17.5%;
+}
+
+.blogr__heading-header_navbar-company {
+  left: 27%;
+} 
+
+.blogr__heading-header_navbar-connect {
+  left: 34.5%;
+}
+
+/*************** Smaller Devices Design *************/
+
+@media screen and (max-width: 1024px) {
+  .blogr__editor-main_image {
+    right: -55%
+  }
+  
+  .blogr__laptop img {
+    left: -45%;
+  }
+
+  .blogr__laptop-text {
+    margin-left: 30rem;
+  }
+
+  .blog__footer {
+    padding-right: 10rem;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  /** Heading **/
+
+  .blogr__heading {
+    padding: 4rem;
+  }
+
+  .blogr__heading-title {
+    margin: 6rem 0;
+  }
+
+  .blogr__heading-title h1 {
+    font-size: 32.8px;
+    line-height: 45.92px;
+  }
+
+  .blogr__heading-header img {
+    margin-right: 0;
+
+    width: 90px;
+  }
+
+  .blogr__heading #menu {
+    display: inline-block;
+  }
+
+  .blogr__heading-header .blogr__heading-header_navbar,
+  .blogr__heading-header .blogr__heading-header_login-signup {
+    display: none;
+  }
+
+  /** Editor **/
+  .blogr__editor h1 {
+    font-size: 25.6px;
+    line-height: 38.4px;
+  }
+
+  .blogr__editor-main {
+    margin: 0;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .blogr__editor-main_image {
+    position: static;
+  }
+  
+  .blogr__editor-main_image img{
+    content: url('./images/illustration-editor-mobile.svg');
+
+    width: 406px;
+    height: 331px;
+  }
+
+  .blogr__editor-main_text {
+    width: 50%;
+
+    margin: 0;
+
+    text-align: center;
+  }
+
+  /** Phone **/
+
+  .blogr__phone {
+    padding: 7.3rem 5rem 8rem;
+  }
+
+  .blogr__phone-text {
+    margin: 0;
+    margin-top: 40%;
+
+    text-align: center;
+  }
+
+  .blogr__phone-image {
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /** Laptop **/
+
+  .blogr__laptop {
+    padding: 5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .blogr__laptop img {
+    content: url('./images/illustration-laptop-mobile.svg');
+
+    position: static;
+  }
+
+  .blogr__laptop-text {
+    width: 50%;
+
+    margin: 0;
+
+    text-align: center;
+  }
+
+  /** Footer **/
+
+  .blog__footer {
+    text-align: center;
+    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  /* body {
+    overflow-x: hidden;
+  } */
+
+  .blogr__heading {
+    padding: 4rem 2rem;
+  }
+
+  .blogr__editor {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .blogr__editor-main_text {
+    padding: 0 2rem;
+    width: 100%;
+  }
+
+  .blogr__phone {
+    margin-top: 5rem;
+    width: 100%;
+  }
+
+  .blogr__phone-image {
+    left: 50%;
+    width: 552px;
+    height: 579px;
+  }
+
+  .blogr__phone-text {
+    margin-top: 13rem;
+  }
+  
+  .blogr__laptop-text {
+    width: 100%;
+  }
+}
